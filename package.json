@@ -1,0 +1,67 @@
+{
+    "name": "@nopecha/pprint",
+    "version": "0.1.1",
+    "author": "nopecha",
+    "description": "A pretty-print utility for Node.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/j-w-yun/node-pprint.git"
+    },
+    "bugs": {
+        "url": "https://github.com/j-w-yun/node-pprint/issues"
+    },
+    "homepage": "https://nopecha.com",
+    "license": "MIT",
+    "type": "commonjs",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "sideEffects": [
+        "dist/pprint.js"
+    ],
+    "engines": {
+        "node": ">=14"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "keywords": [
+        "nopecha",
+        "pprint",
+        "pretty-print",
+        "prettyprint",
+        "pretty-printer",
+        "color print",
+        "colorful print",
+        "node pprint",
+        "node pretty-print",
+        "node color print",
+        "node colorful print",
+        "nodejs pprint",
+        "nodejs pretty-print",
+        "nodejs color print",
+        "nodejs colorful print",
+        "node.js pprint",
+        "node.js pretty-print",
+        "node.js color print",
+        "node.js colorful print",
+        "javascript pprint",
+        "javascript pretty-print",
+        "javascript color print",
+        "javascript colorful print",
+        "typescript pprint",
+        "typescript pretty-print",
+        "typescript color print",
+        "typescript colorful print"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^20.3.1",
+        "ts-node": "^10.9.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.2.2"
+    },
+    "scripts": {
+        "build": "rm -rf ./dist && tsc --project tsconfig.json",
+        "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+    }
+}
