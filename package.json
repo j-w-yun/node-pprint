@@ -1,6 +1,6 @@
 {
     "name": "@nopecha/pprint",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "nopecha",
     "description": "A pretty-print utility for Node.js",
     "repository": {
@@ -22,7 +22,8 @@
         "node": ">=14"
     },
     "files": [
-        "dist/**/*"
+        "dist/**/*",
+        "global.d.ts"
     ],
     "keywords": [
         "nopecha",
