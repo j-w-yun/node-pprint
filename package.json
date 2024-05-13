@@ -1,6 +1,6 @@
 {
     "name": "@nopecha/pprint",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "author": "nopecha",
     "description": "A pretty-print utility for Node.js",
     "repository": {

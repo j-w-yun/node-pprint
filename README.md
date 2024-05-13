@@ -1,6 +1,6 @@
 # @nopecha/pprint
 
-[![npm version](https://badge.fury.io/js/%40nopecha%2Fpprint.svg)](https://badge.fury.io/js/%40nopecha%2Fpprint)
+[![npm version](https://badge.fury.io/js/@nopecha%2Fpprint.svg)](https://badge.fury.io/js/@nopecha%2Fpprint)
 
 This package provides pretty-print logging functions for Node.js.
 
@@ -20,12 +20,25 @@ import '@nopecha/pprint'
 
 The above will expose the pretty-print logging functions to the global scope.
 
+Replace `console` with `global` to color-code terminal outputs in Node.js.
+
+Available are `trace`, `debug`, `info`, `log`, `warn`, and `error`.
+
+```typescript
+global.trace()  // Red
+global.debug('this is green')
+global.info('this is cyan')
+global.warn('this is yellow')
+global.error('this is red')
+global.log('this does not have a color yet')
+```
+
+Add color to `log` messages. Color codes are prefixed with `!` in their own string.
+
 ```typescript
 global.log('!r', 'this is red')
 global.log('!g', 'this is green')
 global.log('!b', 'this is blue')
-global.error('this is error')
-global.warn('this is warn')
 ```
 
 Add background colors with a second color code.
@@ -34,10 +47,20 @@ Add background colors with a second color code.
 global.log('!rb', 'this is red on blue')
 ```
 
-Multiple colors can be used in a single log statement.
+Add text styles with a third color code.
 
 ```typescript
-global.log('!r', 'this is red', '!', ' this is normal ', '!b', 'this is blue')
+global.log('!uwd', 'underlined')    // underlined, white on dark
+global.log('!bdw', 'bolded')        // bolded, dark on white
+global.log('!igw', 'italicized')    // italicized, green on white
+```
+
+Multiple colors can be used in a single log statement.
+
+Note that all color code strings including `"!"` are zero width, except `"! "` where a color-stop code can contain a space that is left untrimmed.
+
+```typescript
+global.log('!r', 'this is red', '!', ' this is normal ', '!b', 'blue', '! ', 'normal')
 ```
 
 ## Copyright
